@@ -1,0 +1,9 @@
+* `konanc` and `kotlinc`
+** same binaries
+** does not show usage if no parameters specified
+** does not line `--help` but `-help`
+** downloads packages from the internet, no matter I downloadede the compiler
+   may not work good for ones who downloads the compiler to try in plan/travel
+** takes seconds to parse commandline arguments
+
+
