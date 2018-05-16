@@ -2,7 +2,7 @@
 
 set -e -x -u
 
-rm *.o *.a *.klib *exe | true
+rm -rf *-build *.o *.a *.klib *exe | true
 
 gcc -mmacosx-version-min=10.10 -c "-I$(pwd)" lib.c -o lib.o
 ar rcs lib.a lib.o
