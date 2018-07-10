@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KONAN_VERSION=0.7
+KONAN_VERSION=0.8
 export PATH=$(cd ~/kotlin-native/kotlin-native-macos-$KONAN_VERSION/bin && pwd):$PATH
 
 ACTUAL_VERSION=$(kotlinc -version 2>/dev/null)
