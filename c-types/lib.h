@@ -1,9 +1,27 @@
 #ifndef LIB2_H_INCLUDED
 #define LIB2_H_INCLUDED
 
-
+/*
 void ints(char c, short d, int e, long f);
 void doubles(float a, double b);
+*/
+
+
+typedef struct {
+  int a;
+  const double b;
+} MyStruct;
+
+void structs(MyStruct s) {}
+
+
+typedef union {
+  const int a;
+  MyStruct b;
+  float c;
+} MyUnion;
+
+void unions(MyUnion u) {}
 
 
 /*
