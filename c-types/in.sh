@@ -8,7 +8,12 @@ gcc -c "-I$(pwd)" lib.c -o lib.o
 ar rcs lib.a lib.o
 
 
-cinterop -def lib.def -compilerOpts "-I$(pwd)" -o lib.klib
+cinterop -def lib.def -compilerOpts "-I." -o lib.klib
+
+klib contents lib.klib
+
+
+
 
 ## konanc -l lib.klib main.kt -linkerOpts lib.a -o main.kexe
 ##

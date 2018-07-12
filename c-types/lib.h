@@ -2,10 +2,18 @@
 #define LIB2_H_INCLUDED
 
 /*
-void ints(char c, short d, int e, long f);
-void doubles(float a, double b);
+struct X;
+void fgoo(struct X* x);
+
 */
 
+
+
+void ints(char c, short d, int e, long f);
+void doubles(float a, double b);
+
+
+/*
 
 typedef struct {
   int a;
@@ -23,6 +31,7 @@ typedef union {
 
 void unions(MyUnion u) {}
 
+*/
 
 /*
 void signed_int(char c, short d, int e, long f) {}
