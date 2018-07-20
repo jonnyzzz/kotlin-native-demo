@@ -24,3 +24,17 @@ void union_by_pointer(MyUnion *u) {
     printf("union: %d %f\n", u->a, u->c);
     struct_by_pointer(&u->b);
 }
+
+
+
+void accept_fun(MyFun f) {
+    printf("accept_fun : %d", f(42));
+}
+
+int theFun(int v) {
+    return v*v + v + 1;
+}
+
+MyFun supply_fun() {
+    return theFun;
+}
