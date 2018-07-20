@@ -6,3 +6,4 @@
 *.wasm
 *.wasm.js
 cmake*
+.idea/
