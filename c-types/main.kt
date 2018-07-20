@@ -4,6 +4,7 @@ import lib.*
 
 fun main(args: Array<String>) {
   callC()
+
   println("The magic indeed")
 }
 
