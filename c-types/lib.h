@@ -1,18 +1,8 @@
 #ifndef LIB2_H_INCLUDED
 #define LIB2_H_INCLUDED
 
-/*
-struct X;
-void fgoo(struct X* x);
-
-*/
-
-
-/*
-void ints(char c, short d, int e, long f);
-void doubles(float a, double b);
-*/
-
+void ints(char c, short d, int e, long f) {}
+void doubles(float a, double b) {}
 
 
 typedef struct {
@@ -20,8 +10,8 @@ typedef struct {
   const double b;
 } MyStruct;
 
-void struct_by_value(MyStruct s);
-void struct_by_pointer(MyStruct* s); 
+void struct_by_value(MyStruct s) {}
+void struct_by_pointer(MyStruct* s) {}
 
 
 typedef union {
@@ -30,8 +20,8 @@ typedef union {
   float c;
 } MyUnion;
 
-void union_by_value(MyUnion u);
-void union_by_pointer(MyUnion* u);
+void union_by_value(MyUnion u) {}
+void union_by_pointer(MyUnion* u) {}
 
 //*/
 
