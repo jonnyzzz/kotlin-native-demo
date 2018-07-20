@@ -27,10 +27,7 @@ void union_by_pointer(MyUnion* u);
 typedef int  (*MyFun)(int);
 
 void  accept_fun(MyFun f);
-MyFun supply_fun(MyFun f);
-
-
-
+MyFun supply_fun();
 
 
 

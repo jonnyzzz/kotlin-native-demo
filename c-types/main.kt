@@ -3,8 +3,10 @@ import lib.*
 
 
 fun main(args: Array<String>) {
-  callRef()
-  callValue()
+//  callRef()
+//  callValue()
+
+  myFun()
 
   println("The magic indeed")
 }
@@ -68,5 +70,8 @@ fun callMix2() {
 
 
 fun myFun() {
+  accept_fun(staticCFunction<Int, Int> { it + 1 })
 
+  val functionFromC = supply_fun()!!
+  functionFromC(42)
 }

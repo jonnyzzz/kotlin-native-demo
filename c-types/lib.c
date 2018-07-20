@@ -28,10 +28,13 @@ void union_by_pointer(MyUnion *u) {
 
 
 void accept_fun(MyFun f) {
-    printf("accept_fun : %d", f(42));
+    printf("accept_fun 1: %d\n", f(42));
+    printf("accept_fun 2: %d\n", f(42));
+    printf("accept_fun 3: %d\n", f(42));
 }
 
 int theFun(int v) {
+    printf("theFun: %d\n", v);
     return v*v + v + 1;
 }
 
