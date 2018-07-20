@@ -1,3 +1,4 @@
+import konan.worker.freeze
 import kotlinx.cinterop.*
 import lib.*
 
@@ -67,11 +68,17 @@ fun callMix2() {
   }
 }
 
-
+object Q {
+  val z = -33
+}
 
 fun myFun() {
-  accept_fun(staticCFunction<Int, Int> { it + 1 })
+  val cPointer = staticCFunction<Int, Int> { it + 1 + Q.z }
+  accept_fun(cPointer)
 
-  val functionFromC = supply_fun()!!
-  functionFromC(42)
+  val functionFromC = supply_fun() ?: error("No function is returned")
+  functionFromC.invoke(42)
+
+  accept_fun(cPointer)
 }
+
