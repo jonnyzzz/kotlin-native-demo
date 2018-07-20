@@ -3,4 +3,6 @@
 *.o
 *.a
 *-build/
+*.wasm
+*.wasm.js
 cmake*
