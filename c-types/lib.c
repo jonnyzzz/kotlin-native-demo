@@ -1,5 +1,6 @@
 #include "lib.h"
 #include "stdio.h"
+#include <string.h>
 
 int foo() {
 
@@ -41,3 +42,22 @@ int theFun(int v) {
 MyFun supply_fun() {
     return theFun;
 }
+
+
+void pass_pointer(void* x, size_t size) {
+}
+
+char* global_string = "AAAAA";
+
+
+
+
+void pass_string(char* str) { }
+char* return_string() { return "AAA"; }
+int copy_string(char* ptr, int size) {
+    char str[] = "BBB";
+    strcpy(ptr, str);
+
+    return 0;
+}
+

@@ -30,6 +30,23 @@ void  accept_fun(MyFun f);
 MyFun supply_fun();
 
 
+void pass_string(char* str);
+char* return_string();
+int copy_string(char* str, int size);
+
+
+
+
+
+#include <stdlib.h>
+#include <stddef.h>
+
+
+
+
+void pass_pointer(void*, size_t size);
+
+extern char* global_string;
 
 
 //*/

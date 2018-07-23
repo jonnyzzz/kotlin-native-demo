@@ -7,8 +7,9 @@ fun main(args: Array<String>) {
 //  callRef()
 //  callValue()
 
-  myFun()
+//  myFun()
 
+  specialTypes()
   println("The magic indeed")
 }
 
@@ -81,4 +82,41 @@ fun myFun() {
 
   accept_fun(cPointer)
 }
+
+
+fun specialTypes() {
+  val str = "aaa"
+
+  pass_string(str.cstr)
+
+  memScoped {
+    val size = 222
+    val buff = allocArray<ByteVar>(size) { _: Int -> zeroValue<ByteVar>() }
+    copy_string(buff, size)
+
+    val message = buff.toKString()
+
+    println("Message from C: $message")
+  }
+
+  val newString = return_string()?.toKString()
+  println("Returned from C: $newString")
+}
+
+
+fun sendString() {
+  val copiedStringFromC = memScoped {
+    val maxSize = 222
+    val buff = allocArray<ByteVar>(maxSize) {  zeroValue<ByteVar>() }
+    if (copy_string(buff, maxSize) != 0) {
+      throw Error("Failed to read string from C")
+    }
+
+    buff.toKString()
+
+  }
+
+  println("Message from C: $copiedStringFromC")
+}
+
 
