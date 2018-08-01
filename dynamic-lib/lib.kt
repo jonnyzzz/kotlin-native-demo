@@ -1,15 +1,15 @@
-package com.jetbrains.tutorial
+package demo
 
 
-object Object {
+object DemoObject {
   val field = "A"
 }
 
-class Clazz {
-  fun memberFunction() : Long = 42
+class DemoClazz {
+  fun memberFunction(p: Int): Long = 42
 }
 
-fun forIntegers(b: Byte, s: Short, i: Int, l:Long) { }
+fun forIntegers(b: Byte, s: Short, i: Int, l: Long) { }
 fun forFloats(f: Float, d: Double) { }
 
 fun strings(str: String) : String { 
