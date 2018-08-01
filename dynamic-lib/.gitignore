@@ -2,5 +2,8 @@ a.out
 demo_api.h
 libdemo.*
 demo.dll
+demo.lib
+demo.exp
+main.obj
 demo/
 
