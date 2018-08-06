@@ -7,4 +7,5 @@ demo.exp
 main.obj
 main.exe
 demo/
+*.framework
 
