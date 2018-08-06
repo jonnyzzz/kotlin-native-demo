@@ -1,0 +1,15 @@
+a.out
+demo_api.h
+libdemo.*
+demo.dll
+demo.lib
+demo.exp
+main.obj
+main.exe
+demo/
+*.framework
+*.dylib
+*.so
+iOS*
+macOS
+
