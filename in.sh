@@ -1,6 +1,6 @@
 #!/bin/bash
 
-KONAN_VERSION=0.8.1
+KONAN_VERSION=0.8.2
 
 KONAN_INFIX=
 
