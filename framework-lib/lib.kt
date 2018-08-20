@@ -1,21 +1,31 @@
 package demo
 
 
-object DemoObject {
+object Object {
   val field = "A"
 }
 
-class DemoClazz {
-  fun memberFunction(p: Int): Long = 42
+interface Interface {
+  fun iMember() {}
 }
 
-fun forIntegers(b: Byte, s: Short, i: Int, l: Long) { }
-fun forFloats(f: Float, d: Double) { }
+class Clazz : Interface {
+  fun member(p: Int): Long? = 42
+}
 
-fun strings(str: String) : String { 
+fun forIntegers(b: Byte, s: Short, i: Int, l: Long?) { }
+fun forFloats(f: Float, d: Double?) { }
+
+fun strings(str: String?) : String { 
   return "That is '$str' from C"
 }
 
-val globalString = "A global String"
+
+val global = "A global String"
+
+typealias FunFunction = (String) -> String?
+
+fun acceptFun(f: FunFunction) = f("Kotlin/Native rocks!")
+fun supplyFun() : FunFunction = { "$it is cool!" }
 
 

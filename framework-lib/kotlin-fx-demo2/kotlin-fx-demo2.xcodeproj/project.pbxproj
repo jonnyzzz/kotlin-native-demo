@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4749631321186261000574C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749631221186261000574C3 /* main.swift */; };
-		474963212118643C000574C3 /* Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474963202118643B000574C3 /* Demo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		47D7D8B12124753B00FA9F1B /* Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474963202118643B000574C3 /* Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				474963212118643C000574C3 /* Demo.framework in Frameworks */,
+				47D7D8B12124753B00FA9F1B /* Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +192,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../macOS",
+					"@executable_path/../../../../macOS",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/../macOS";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -248,7 +252,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../macOS",
+					"@executable_path/../../../../macOS",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/../macOS";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;

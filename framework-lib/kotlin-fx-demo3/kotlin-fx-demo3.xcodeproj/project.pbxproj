@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473CFD6A21246EE900BE536C /* Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47496335211864F0000574C3 /* Demo.framework */; };
 		4749632F211864D4000574C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4749632E211864D4000574C3 /* main.m */; };
-		47496336211864F0000574C3 /* Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47496335211864F0000574C3 /* Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,18 +34,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47496336211864F0000574C3 /* Demo.framework in Frameworks */,
+				473CFD6A21246EE900BE536C /* Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		473CFD6921246EE900BE536C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47496322211864D4000574C3 = {
 			isa = PBXGroup;
 			children = (
 				4749632D211864D4000574C3 /* kotlin-fx-demo3 */,
 				4749632C211864D4000574C3 /* Products */,
+				473CFD6921246EE900BE536C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,7 +252,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "/Users/jonnyzzz/Work/kotlin-native-demo/framework-lib/macOS";
 				INSTALL_PATH = "/Users/jonnyzzz/Work/kotlin-native-demo/framework-lib/macOS";
-				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path/../../../../macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"REEXPORTED_FRAMEWORK_NAMES[arch=*]" = Demo;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -257,7 +265,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = "/Users/jonnyzzz/Work/kotlin-native-demo/framework-lib/macOS";
 				INSTALL_PATH = "/Users/jonnyzzz/Work/kotlin-native-demo/framework-lib/macOS";
-				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path";
+				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = "@executable_path/../../../../macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"REEXPORTED_FRAMEWORK_NAMES[arch=*]" = Demo;
 				STRIP_INSTALLED_PRODUCT = NO;

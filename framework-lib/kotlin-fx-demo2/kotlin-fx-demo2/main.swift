@@ -9,13 +9,21 @@
 import Foundation
 import Demo
 
-let field = DemoDemoObject().field
 
-let clazz = DemoDemoClazz()
-clazz.memberFunction(p: 42)
+let kotlinObject = DemoObject()
+assert(kotlinObject === DemoObject(), "Kotlin object has only one instance")
+
+let field = DemoObject().field
+
+let clazz = DemoClazz()
+clazz.member(p: 42)
 
 Demo.forIntegers(b: 1, s: 2, i: 3, l: 4)
+Demo.forFloats(f: 2.71, d: nil)
 
-let ret = Demo.strings(str: "That is string")
-print("Hello, World!" + field)
+let ret = Demo.acceptFun { "\($0) Kotlin is fun" }
+if (ret != nil) {
+  print(ret!)
+}
+
 
