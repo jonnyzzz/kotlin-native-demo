@@ -104,7 +104,7 @@ fun specialTypes() {
 }
 
 
-fun sendString() {
+fun sendString_old() {
   val copiedStringFromC = memScoped {
     val maxSize = 222
     val buff = allocArray<ByteVar>(maxSize) {  zeroValue<ByteVar>() }
@@ -115,6 +115,20 @@ fun sendString() {
     buff.toKString()
 
   }
+
+  println("Message from C: $copiedStringFromC")
+}
+
+fun sendString() {
+  val buf = ByteArray(222)
+
+  buf.usePinned { pinned ->
+    if (copy_string(pinned.addressOf(0), buf.size - 1) != 0) {
+      throw Error("Failed to read string from C")
+    }
+  }
+
+  val copiedStringFromC = buf.stringFromUtf8()
 
   println("Message from C: $copiedStringFromC")
 }
