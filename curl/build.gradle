@@ -4,6 +4,9 @@ plugins {
 
 konanArtifacts {
   program("app") {
+  
+    srcFiles file("main.kt")
+    
     enableOptimizations(true)
 
     libraries {
