@@ -1,0 +1,13 @@
+plugins {
+  id("org.jetbrains.kotlin.konan") version("0.9")
+}
+
+konanArtifacts {
+  program("app") {
+    enableOptimizations(true)
+
+    libraries {
+      file("build/c_interop/libcurl.klib")
+    }
+  }
+}
