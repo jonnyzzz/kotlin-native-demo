@@ -4,12 +4,15 @@ plugins {
 
 konanArtifacts {
   program("app") {
-  
+
     srcFiles file("main.kt")
-    
+
     enableOptimizations(true)
 
     libraries {
+      //TODO: use `lib.sh` to build it or
+      //TODO: see https://github.com/JetBrains/kotlin-native/blob/master/GRADLE_PLUGIN.md
+      //TODO: to build the library with Gradle too
       file("build/c_interop/libcurl.klib")
     }
   }
