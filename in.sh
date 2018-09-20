@@ -1,8 +1,9 @@
 #!/bin/bash
 
-KONAN_VERSION=0.8.2
+KONAN_VERSION=0.9.2
 
 KONAN_INFIX=
+KONAN_SUFFIX=-dev-4008
 
 ### from https://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux
 
@@ -15,7 +16,7 @@ case "${unameOut}" in
     *)          echo "Unknown OS"; exit 22;;
 esac
 
-export PATH=$(cd ~/kotlin-native/kotlin-native-$KONAN_INFIX-$KONAN_VERSION/bin && pwd):$PATH
+export PATH=$(cd ~/kotlin-native/kotlin-native-$KONAN_INFIX-$KONAN_VERSION$KONAN_SUFFIX/bin && pwd):$PATH
 
 ACTUAL_VERSION=$(kotlinc -version 2>/dev/null)
 
