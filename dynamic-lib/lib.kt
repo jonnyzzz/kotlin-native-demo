@@ -1,18 +1,18 @@
-package demo
+package example
 
 
-object DemoObject {
+object Object {
   val field = "A"
 }
 
-class DemoClazz {
-  fun memberFunction(p: Int): Long = 42
+class Clazz {
+  fun memberFunction(p: Int): ULong = 42UL
 }
 
-fun forIntegers(b: Byte, s: Short, i: Int, l: Long) { }
+fun forIntegers(b: Byte, s: Short, i: UInt, l: Long) { }
 fun forFloats(f: Float, d: Double) { }
 
-fun strings(str: String) : String { 
+fun strings(str: String) : String? { 
   return "That is '$str' from C"
 }
 
