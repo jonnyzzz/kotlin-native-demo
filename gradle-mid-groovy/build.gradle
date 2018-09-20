@@ -1,0 +1,11 @@
+plugins {
+  id 'org.jetbrains.kotlin.konan' version '0.9.1'
+}
+
+konanArtifacts {
+  program("app") {
+    enableOptimizations(true)
+  }
+}
+
+
