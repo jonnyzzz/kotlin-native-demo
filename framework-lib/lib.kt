@@ -1,4 +1,4 @@
-package demo
+package example
 
 
 object Object {
@@ -10,22 +10,17 @@ interface Interface {
 }
 
 class Clazz : Interface {
-  fun member(p: Int): Long? = 42
+  fun member(p: Int): ULong? = 42UL
 }
 
-fun forIntegers(b: Byte, s: Short, i: Int, l: Long?) { }
+fun forIntegers(b: Byte, s: UShort, i: Int, l: ULong?) { }
 fun forFloats(f: Float, d: Double?) { }
 
 fun strings(str: String?) : String { 
   return "That is '$str' from C"
 }
 
-
-val global = "A global String"
-
-typealias FunFunction = (String) -> String?
-
-fun acceptFun(f: FunFunction) = f("Kotlin/Native rocks!")
-fun supplyFun() : FunFunction = { "$it is cool!" }
+fun acceptFun(f: (String) -> String?) = f("Kotlin/Native rocks!")
+fun supplyFun() : (String) -> String? = { "$it is cool!" }
 
 

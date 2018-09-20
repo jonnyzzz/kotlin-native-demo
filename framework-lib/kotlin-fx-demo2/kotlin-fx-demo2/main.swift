@@ -10,18 +10,18 @@ import Foundation
 import Demo
 
 
-let kotlinObject = DemoObject()
-assert(kotlinObject === DemoObject(), "Kotlin object has only one instance")
+let kotlinObject = Object()
+assert(kotlinObject === Object(), "Kotlin object has only one instance")
 
-let field = DemoObject().field
+let field = Object().field
 
-let clazz = DemoClazz()
+let clazz = Clazz()
 clazz.member(p: 42)
 
-Demo.forIntegers(b: 1, s: 2, i: 3, l: 4)
-Demo.forFloats(f: 2.71, d: nil)
+LibKt.forIntegers(b: 1, s: 2, i: 3, l: 4)
+LibKt.forFloats(f: 2.71, d: nil)
 
-let ret = Demo.acceptFun { "\($0) Kotlin is fun" }
+let ret = LibKt.acceptFun { "\($0) Kotlin is fun" }
 if (ret != nil) {
   print(ret!)
 }

@@ -17,13 +17,13 @@ int main(int argc, const char * argv[]) {
         DemoClazz* clazz = [[ DemoClazz alloc] init];
         [clazz memberP:42];
         
-        [Demo forIntegersB:1 s:1 i:3 l:[NSNumber numberWithLongLong:4]];
-        [Demo forIntegersB:1 s:1 i:3 l:nil];
+        [DemoLibKt forIntegersB:1 s:1 i:3 l:[DemoULong numberWithUnsignedLongLong:4]];
+        [DemoLibKt forIntegersB:1 s:1 i:3 l:nil];
         
-        [Demo forFloatsF:2.71 d:[NSNumber numberWithDouble:2.71]];
-        [Demo forFloatsF:2.71 d:nil];
+        [DemoLibKt forFloatsF:2.71 d:[DemoDouble numberWithDouble:2.71]];
+        [DemoLibKt forFloatsF:2.71 d:nil];
         
-        NSString* ret = [Demo acceptFunF:^NSString * _Nullable(NSString * it) {
+        NSString* ret = [DemoLibKt acceptFunF:^NSString * _Nullable(NSString * it) {
             return [it stringByAppendingString:@" Kotlin is fun"];
         }];
         
