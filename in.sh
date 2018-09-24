@@ -3,7 +3,7 @@
 KONAN_VERSION=0.9.2
 
 KONAN_INFIX=
-KONAN_SUFFIX=-dev-4008
+KONAN_SUFFIX=
 
 ### from https://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux
 
