@@ -1,4 +1,3 @@
-import konan.worker.freeze
 import kotlinx.cinterop.*
 import lib.*
 
