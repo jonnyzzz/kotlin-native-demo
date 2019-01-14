@@ -1,0 +1,46 @@
+plugins {
+  id 'org.jetbrains.kotlin.multiplatform' version '1.3.11'
+}
+
+
+kotlin {
+  targets {
+    fromPreset(presets.macosX64, 'native') {
+      compilations.main {
+        outputKinds 'executable'
+
+        cinterops {
+          myInterop {
+            defFile project.file("src/native/file.def")
+          }
+        }
+      }
+    }
+  }
+
+  sourceSets {
+    nativeMain {
+      kotlin.srcDir('src/native')
+    }
+  }
+}
+
+
+task nativeRun(type: Exec) {}
+
+afterEvaluate {
+  /// https://youtrack.jetbrains.com/issue/KT-28106
+  /// that is the hack for now!
+  tasks.nativeRun.with {
+    def main = kotlin.targets.native.compilations.main
+
+    dependsOn main.linkTaskName('executable', 'debug')
+    executable main.getBinary("executable", 'debug').toString()
+  }
+}
+
+
+
+
+
+
