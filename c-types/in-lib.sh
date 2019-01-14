@@ -14,8 +14,3 @@ klib contents lib.klib
 
 
 
-
-## konanc -l lib.klib main.kt -linkerOpts lib.a -o main.kexe
-##
-## ./main.kexe
-
